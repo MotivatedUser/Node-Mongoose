@@ -9,12 +9,13 @@ const connect = mongoose.connect(url, {
 });
 
 connect.then(() => {
-    const newCampsite = new Campsite({
-        name: 'React Lake Campground',
-        description: 'test',
-    });
 
-    newCampsite.save()
+    console.log('Connected correctly to server');
+
+    Campsite.create({
+        name: 'React Lake Campground',
+        description: 'test'
+    })
     .then(campsite => {
         console.log(campsite);
         return Campsite.find();
