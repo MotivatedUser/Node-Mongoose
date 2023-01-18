@@ -12,7 +12,7 @@ const campsiteSchema = new Schema({
         required: true
     }
 }, {
-    rimestamps: true
+    timestamps: true
 });
 
 const Campsite = mongoose.model('Campsite', campsiteSchema);
